@@ -1,5 +1,5 @@
 {
-    "name": "celd/Opml",
+    "name": "celd/opml-import-export",
     "type": "library",
     "description": "Library for importing and exporting OPML documents for list of (RSS/Atom) feeds.",
     "keywords": ["opml", "rss", "feeds", "atom"],
