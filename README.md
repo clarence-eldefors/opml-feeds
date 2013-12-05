@@ -12,7 +12,7 @@ Import OPML file:
 ```php
 <?php
 use Celd\Opml\Importer;
-$importer = new Importer();
+$importer = new Importer(file_get_contents('http://opml-url'));
 $feedList = $importer->getFeedList();
 foreach ($feedList->items as $item) {
   if ($this->getType=='category') {
@@ -33,6 +33,19 @@ Exporting OPML file
 ```php
 <?php
 use Celd\Opml\Importer;
-$importer = new Importer();
-echo $importer->export(file_get_contents(FEED_URL));
+use Celd\Opml\Model\FeedList;
+use Celd\Opml\Model\Feeed;
+
+$feedList = new FeedList();
+
+$feed = new Feed();
+$feed->setTitle('Feed title');
+$feed->setXmlUrl('http://rss-feed-url');
+$feed->setType('rss');
+$feed->setHtmlUrl('http://html-url');
+
+$feedList->addItem($feed);
+
+$importer = new Importer($feedList);
+echo $importer->export();
 ```
