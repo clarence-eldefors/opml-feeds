@@ -1,0 +1,20 @@
+{
+    "name": "celd/Opml",
+    "type": "library",
+    "description": "Library for importing and exporting OPML documents for list of (RSS/Atom) feeds.",
+    "keywords": ["opml", "rss", "feeds", "atom"],
+    "homepage": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Clarence Eldefors",
+            "email": "clarence@eldefors.com"
+        }],
+    "require" : {
+        "php": ">=5.3.3",
+        "symfony/serializer": "2.*"
+    },
+    "autoload": {
+        "psr-0": { "Celd\\Opml\\": "src" }
+    }
+}

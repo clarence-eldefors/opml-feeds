@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+    <head>
+        <title>Fixture opml sample1</title>
+    </head>
+    <body>
+        <outline text="Planet PHP" title="Planet PHP" type="rss"
+                 xmlUrl="http://www.planet-php.org/rss/" htmlUrl="http://planet-php.net"/>
+    </body>
+</opml>
