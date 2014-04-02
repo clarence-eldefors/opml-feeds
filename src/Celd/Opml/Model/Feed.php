@@ -82,9 +82,9 @@ class Feed {
      * @param $item
      */
     public function fromArray($item) {
-        $this->setTitle($item['@title']);
-        $this->setXmlUrl($item['@xmlUrl']);
-        $this->setHtmlUrl($item['@htmlUrl']);
-        $this->setType($item['@type']);
+        $this->setTitle(!empty($item['@title']) ? $item['@title'] : null);
+        $this->setXmlUrl(!empty($item['@xmlUrl']) ? $item['@xmlUrl'] : null);
+        $this->setHtmlUrl(!empty($item['@htmlUrl']) ? $item['@htmlUrl'] : null);
+        $this->setType(!empty($item['@type']) ? $item['@type'] : null);
     }
 }
