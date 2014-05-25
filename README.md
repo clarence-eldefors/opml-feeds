@@ -14,14 +14,14 @@ Import OPML file:
 use Celd\Opml\Importer;
 $importer = new Importer(file_get_contents('http://opml-url'));
 $feedList = $importer->getFeedList();
-foreach ($feedList->items as $item) {
-  if ($this->getType=='category') {
+foreach ($feedList->getItems() as $item) {
+  if ($item->getType() == 'category') {
     echo $item->getTitle(); // Category title
-    foreach($this->getFeeds() as $feed) {
+    foreach($item->getFeeds() as $feed) {
       echo $feed->getTitle() . "\n";
     }
   }
-  echo $item->getTitle(); /Root feed title
+  echo $item->getTitle(); //Root feed title
 }
 
 // Properties of Model/Feed are:
