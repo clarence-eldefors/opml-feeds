@@ -46,6 +46,6 @@ $feed->setHtmlUrl('http://html-url');
 
 $feedList->addItem($feed);
 
-$importer = new Importer($feedList);
-echo $importer->export();
+$importer = new Importer();
+echo $importer->export($feedList);
 ```
